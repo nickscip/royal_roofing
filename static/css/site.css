@@ -2405,3 +2405,31 @@ img {
     font-size: 17px;
   }
 }
+
+/* Launch state: hide placeholder proof sections until real photos and reviews are ready. */
+.rr-testimonials {
+  display: none;
+}
+
+.rr-featured:not(.rr-about-ready) {
+  min-height: 0;
+  padding-top: 76px;
+  padding-bottom: 96px;
+}
+
+.rr-featured:not(.rr-about-ready) > h2,
+.rr-featured:not(.rr-about-ready) > .rr-arrow,
+.rr-featured:not(.rr-about-ready) > .rr-featured-grid {
+  display: none;
+}
+
+.rr-featured:not(.rr-about-ready) .rr-ready {
+  margin-top: 0;
+}
+
+@media (max-width: 720px) {
+  .rr-featured:not(.rr-about-ready) {
+    padding-top: 56px;
+    padding-bottom: 72px;
+  }
+}
