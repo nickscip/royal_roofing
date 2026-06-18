@@ -1,0 +1,34 @@
+name: Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build site
+        uses: shalzz/zola-deploy-action@master
+        env:
+          BUILD_ONLY: true
+
+      - name: Verify expected output files exist
+        run: |
+          test -f public/index.html
+          test -f public/about/index.html
+          test -f public/services/index.html
+          test -f public/contact/index.html
+          test -f public/residential-roofing-services/index.html
+          test -f public/new-construction-roofing-services/index.html
+          test -f public/commercial-roofing-services/index.html
+          test -f public/installation-roofing-services/index.html
+          test -f public/inspection-roofing-services/index.html
+          test -f public/maintenance-and-repair-services/index.html
+          test -f public/CNAME
+          echo "All expected files present."
