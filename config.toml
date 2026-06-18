@@ -1,0 +1,30 @@
+base_url = "https://royalroofingsolutions.com"
+title = "Royal Roofing Solutions"
+description = "Residential roofing, roof repair, storm damage restoration, metal roofing, and inspections in Greater Dallas, Texas."
+default_language = "en"
+compile_sass = false
+minify_html = true
+build_search_index = false
+generate_feeds = false
+
+[markdown]
+smart_punctuation = true
+
+[extra]
+phone = "972-812-8766"
+phone_href = "tel:+19728128766"
+email = "ray@royalroofingsolutions.com"
+email_href = "mailto:ray@royalroofingsolutions.com"
+service_area = "Greater Dallas, TX and surrounding areas"
+tagline = "Where Quality Reigns"
+estimate_cta = "Schedule a Free Inspection"
+
+[extra.nav]
+links = [
+  { url = "/", name = "Home" },
+  { url = "/about/", name = "About" },
+  { url = "/services/", name = "Roofing Services" },
+  { url = "/roof-replacement/", name = "Roof Replacement" },
+  { url = "/storm-damage/", name = "Storm Damage" },
+  { url = "/contact/", name = "Contact" },
+]

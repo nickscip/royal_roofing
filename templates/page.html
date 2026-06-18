@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Royal Roofing Solutions</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p>{{ page.description }}</p>{% endif %}
+  </div>
+</section>
+<article class="page-body container">
+  {{ page.content | safe }}
+  <div class="inline-cta">
+    <strong>Want us to look at your roof?</strong>
+    <a class="button button--small" href="/contact/">{{ config.extra.estimate_cta }}</a>
+  </div>
+</article>
+{% endblock content %}

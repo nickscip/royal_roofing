@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="{{ lang | default(value='en') }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} | {% elif section.title %}{{ section.title }} | {% endif %}{{ config.title }}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% elif section.description %}{{ section.description }}{% else %}{{ config.description }}{% endif %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Oswald:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/site.css">
+    <script src="/js/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header" data-header>
+      <div class="topbar">
+        <div class="container topbar__inner">
+          <span>{{ config.extra.service_area }}</span>
+          <span class="topbar__contact">
+            <a href="{{ config.extra.phone_href }}">{{ config.extra.phone }}</a>
+            <a href="{{ config.extra.email_href }}">{{ config.extra.email }}</a>
+          </span>
+        </div>
+      </div>
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="brand" href="/" aria-label="{{ config.title }} home">
+          <img class="brand__mark" src="/images/Img_61971.png" alt="" width="87" height="82">
+          <span>
+            <strong>Royal Roofing Solutions</strong>
+            <small>{{ config.extra.tagline }}</small>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-nav-toggle>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="sr-only">Menu</span>
+        </button>
+        <div class="nav__links" id="site-menu" data-nav-menu>
+          {% for item in config.extra.nav.links %}
+            <a href="{{ item.url }}">{{ item.name }}</a>
+          {% endfor %}
+          <a class="button button--small" href="{{ config.extra.phone_href }}">Call Now</a>
+        </div>
+      </nav>
+    </header>
+    <main id="main-content">
+      {% block content %}{% endblock content %}
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand brand--footer" href="/">
+            <img class="brand__mark" src="/images/Img_61971.png" alt="" width="87" height="82">
+            <span>
+              <strong>Royal Roofing Solutions</strong>
+              <small>{{ config.extra.tagline }}</small>
+            </span>
+          </a>
+          <p>Roof inspections, repairs, replacements, metal roofing, and storm damage support for North Texas homeowners.</p>
+        </div>
+        <div>
+          <h2>Company</h2>
+          <a href="/about/">About</a>
+          <a href="/services/">Services</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div>
+          <h2>Contact</h2>
+          <a href="{{ config.extra.phone_href }}">{{ config.extra.phone }}</a>
+          <a href="{{ config.extra.email_href }}">{{ config.extra.email }}</a>
+          <span>{{ config.extra.service_area }}</span>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>&copy; {{ now() | date(format="%Y") }} Royal Roofing Solutions. All rights reserved.</span>
+      </div>
+    </footer>
+  </body>
+</html>
