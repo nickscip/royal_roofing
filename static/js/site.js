@@ -1,3 +1,12 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const success = document.querySelector("[data-form-success]");
+
+  if (success && new URLSearchParams(window.location.search).get("sent") === "true") {
+    success.setAttribute("data-visible", "");
+    success.focus({ preventScroll: true });
+  }
+});
+
 document.addEventListener("click", (event) => {
   const toggle = event.target.closest("[data-nav-toggle]");
 
