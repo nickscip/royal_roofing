@@ -1,6 +1,6 @@
 base_url = "https://royalroofing.solutions"
 title = "Royal Roofing Solutions"
-description = "Residential roofing, roof repair, storm damage restoration, metal roofing, and inspections in Greater Dallas, Texas."
+description = "Residential roofing, roof repair, storm damage restoration, metal roofing, and inspections in Greater DFW and El Paso, Texas."
 default_language = "en"
 compile_sass = false
 minify_html = true
@@ -15,7 +15,7 @@ phone = "972-812-8766"
 phone_href = "tel:+19728128766"
 email = "ray@royalroofingsolutions.com"
 email_href = "mailto:ray@royalroofingsolutions.com"
-service_area = "Greater Dallas, TX and surrounding areas"
+service_area = "Greater DFW Area and El Paso"
 tagline = "Where Quality Reigns"
 estimate_cta = "Schedule a Free Inspection"
 
