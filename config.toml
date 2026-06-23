@@ -13,8 +13,8 @@ smart_punctuation = true
 [extra]
 phone = "972-812-8766"
 phone_href = "tel:+19728128766"
-email = "ray@royalroofingsolutions.com"
-email_href = "mailto:ray@royalroofingsolutions.com"
+email = "contact@royalroofing.solutions"
+email_href = "mailto:contact@royalroofing.solutions"
 service_area = "Greater DFW Area and El Paso"
 tagline = "Where Quality Reigns"
 estimate_cta = "Schedule a Free Inspection"
